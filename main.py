@@ -6,7 +6,8 @@ def main():
 
     # トークンの取得
     with open('token.txt') as f:
-        param = {'token': f.read()}
+        taken = f.read()
+    param = {'token': taken.replace('\n','')}
 
     # 過去の情報を読み込む
     data_get_only = False
